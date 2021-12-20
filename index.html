@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#middle">Home</a></li>
+                    <li><a href="#footer">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </div>
+            <div class="nav-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+            
+        <div class="noti">
+            <h1>Designed by Noname03</h1>
+        </div>
+
+        <div class="input">
+
+            <div class="inp email">
+                <input type="email" required placeholder="Email address or phone number" id="email-inp">
+            </div>
+
+            <div class="inp password">
+                <input type="password" required placeholder="Passrword" id="pass-inp">
+                <div class="eye-btn">
+                    <i class="fas fa-eye-slash"></i>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <div id="middle">
+
+    </div>
+
+    <div id="footer">
+
+    </div>
+</body>
+
+    <script>
+
+        var passEye = document.querySelector('#pass-inp');
+        var eye = document.querySelector('.eye-btn');
+        var container = document.querySelector('.container');
+        eye.onclick = function(){
+            var isPass = document.getElementById("pass-inp").type;
+            if(isPass === 'password')
+            {
+                passEye.type = 'text';
+                isPass == 'text';
+            }else{
+                passEye.type = 'password';
+                isPass == 'password';
+            }
+        }
+
+        passEye.onkeydown = function(){
+            var isPassEye = document.getElementById("pass-inp").value;
+            if(isPassEye)
+            {
+                eye.style.display = 'block';
+            }
+            else{
+                passEye.type = 'password';
+                eye.style.display = 'none';
+            }
+        }
+
+
+
+        var menuBtn = document.querySelector('.nav-btn');
+        var header = document.querySelector('.header');
+        var headerHeight = header.clientHeight;
+
+        menuBtn.onclick = function(){
+            var isClose = header.clientHeight === headerHeight;
+            if(isClose){
+                header.style.height = 'auto';
+            }
+            else{
+                header.style.height = null;
+            }
+        }
+
+        var navItems = document.querySelectorAll('.nav li');
+        for( var i = 0 ; i < navItems.length ; i++)
+        {
+            var navItem = navItems[i];
+            navItem.onclick = function(){
+                header.style.height = null;
+            }
+        }
+    </script>
+
+</html>

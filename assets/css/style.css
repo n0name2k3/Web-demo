@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.inp{
+    height: 32px;
+    width: 250px;
+    padding: 7px 8px;
+    margin: 8px 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.container{
+    position: relative;
+    height: 900px;
+    background: #1f1f1f;
+
+    
+}
+
+.header{
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.mobile-header{
+    position: absolute;
+    height: 50px;
+    background: #000;
+    width: 100%;
+    top: 0;
+    display: none;
+}
+
+.nav-btn{
+    position: fixed;
+    right :0;
+    top : 0;
+    height: 50px;
+    text-align: center;
+    background: #ccc;
+    display: none;
+}
+
+
+.fa-bars{
+    color: #000;
+    padding: 18px 20px;
+}
+
+.nav{
+    color: #fff;
+    background: #000;
+}
+
+.nav ul li{
+    list-style: none;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 3;
+    display: inline-block;
+}   
+
+
+
+.nav ul li:hover{
+    background: #ccc;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav ul li:hover a{
+    color: #000;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: #fff;
+    padding: 12px 24px;
+}
+
+.noti{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    animation: rainbow_animation .9s linear infinite;
+    background-size: 400% 100%;
+}
+
+
+.input{
+    position: absolute;
+    height: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30%;
+}
+
+.input input{ 
+    border: none;
+    width: 200px;
+    outline: none;
+    margin: 8px 8px;
+    background: #1f1f1f;
+    color : #fff;
+}
+
+
+.eye-btn{
+    position: fixed;
+    right: 0;
+    transform: translateX(-50%);
+    top: 36%;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #fff;
+    display: none;
+}
+
+.eye-btn:hover{
+
+    background: #ccc;
+
+}
+
+.fa-eye-slash{
+    padding: 7px 5px;
+}
+
+
+#middle{
+    height: 900px;
+    background: #fff;
+}
+
+#footer{
+    height: 900px;
+    background: green;
+}
+
+@keyframes rainbow_animation {
+  
+    0%{
+        background-position: 0 0;
+    }
+    8%{
+        background-position: 8% 0;
+    }
+    16%{
+        background-position: 16% 0;
+    }
+    25%{
+        background-position: 25% 0;
+    }
+    33%{
+        background-position: 33% 0;
+    }
+    41%{
+        background-position: 41% 0;
+    }
+    50%{
+        background-position: 50% 0;
+    }
+    58%{
+        background-position: 58% 0;
+    }
+    66%{
+        background-position: 66% 0;
+    }
+    75%{
+        background-position: 75% 0;
+    }
+    83%{
+        background-position: 83% 0;
+    }
+    91%{
+        background-position: 91% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+
+
+@keyframes rainbow{
+    100%,0%{
+        color: rgb(255,0,0);
+    }
+    8%{
+        color: rgb(255,127,0);
+    }
+    16%{
+        color: rgb(255,255,0);
+    }
+    25%{
+        color: rgb(127,255,0);
+    }
+    33%{
+        color: rgb(0,255,0);
+    }
+    41%{
+        color: rgb(0,255,127);
+    }
+    50%{
+        color: rgb(0,255,255);
+    }
+    58%{
+        color: rgb(0,127,255);
+    }
+    66%{
+        color: rgb(0,0,255);
+    }
+    75%{
+        color: rgb(127,0,255);
+    }
+    83%{
+        color: rgb(255,0,255);
+    }
+    91%{
+        color: rgb(255,0,127);
+    }
+}
